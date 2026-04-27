@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Women Farmer AI Health Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand__title" id="brandTitle">AI Health Assistant</div>
+        <div class="brand__subtitle" id="brandSubtitle">For Women Farmers • SDG 3</div>
+      </div>
+      <div class="controls">
+        <label class="control">
+          <span id="langLabel">Language</span>
+          <select id="languageSelect" aria-label="Language">
+            <option value="en" selected>English</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="notice" id="notice">
+        <div class="notice__title" id="noticeTitle">Important</div>
+        <div class="notice__body" id="noticeBody">
+          This chatbot provides general health information and is not a substitute for a clinician. If you think it’s an
+          emergency, call your local emergency number (India: 112, US: 911). Your chats are not stored on disk.
+        </div>
+      </section>
+
+      <section class="chat" aria-label="Chat messages">
+        <div id="messages" class="messages"></div>
+        <div class="quick" id="quickReplies" aria-label="Quick replies"></div>
+      </section>
+
+      <section class="composer" aria-label="Message input">
+        <input
+          id="messageInput"
+          class="composer__input"
+          type="text"
+          placeholder="Type your question…"
+          autocomplete="off"
+        />
+        <button id="sendButton" class="composer__send" type="button">Send</button>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
